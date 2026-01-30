@@ -9,6 +9,7 @@ resource "aws_instance" "main" {
     count = var.num_of_vm
     associate_public_ip_address = false
     vpc_security_group_ids = var.web_sg
+    user_data = var.user_data
     
   tags = {
     "Name" = local.tag_Name
